@@ -1,18 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <TextView
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/logo"
+        android:src="@drawable/ic_iot_logo_new_dark"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="0dp">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="left"
+        android:padding="20dp"
+
+        android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        app:cardBackgroundColor="#32527b"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10px"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_rain_svgrepo_com"
+                app:tint="@color/white">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/rtyrt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RAINING"
+                android:textSize="22dp"
+                android:fontFamily="@font/raleway_black"
+                android:textAlignment="center"
+                android:layout_marginTop="10px"
+                android:textColor="@color/white">
+
+            </TextView>
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        app:cardBackgroundColor="#e26313"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:src="@drawable/ic_humidity_conditioning_air_conditioner_smart_home_svgrepo_com"
+                app:tint="@color/white"
+                android:scaleType="fitEnd"
+                android:padding="1dp">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:text="60"
+                android:textAlignment="center"
+                android:fontFamily="@font/raleway_black"
+                android:textSize="70dp"
+                android:textColor="@color/white">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="Humidity ( % )"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/raleway_regular"></TextView>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#b2022f"
+                android:layout_margin="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="6"
+                        android:src="@drawable/ic_temperature_svgrepo_com"
+                        app:tint="@color/white"
+                        android:scaleType="fitEnd"
+                        android:padding="10dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
+                        android:text="43"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/raleway_black"
+                        android:textSize="70dp"
+                        android:textColor="@color/white">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:text="Temprature ( °F )"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/raleway_regular"></TextView>
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#48a14d"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10px"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:src="@drawable/ic_gas_svgrepo_com"
+                        app:tint="@color/white">
+                    </ImageView>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="GAS NOT FOUND"
+                        android:textSize="22dp"
+                        android:fontFamily="@font/raleway_black"
+                        android:textAlignment="center"
+                        android:layout_marginTop="10px"
+                        android:textColor="@color/white">
+
+                    </TextView>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:layout_marginBottom="80px">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Design and Developed-"
+            android:fontFamily="@font/raleway_regular"
+            android:textAlignment="center"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_regular"
+            android:text="Kavindu Theekshana Hetti Arachchi"
+            android:textAlignment="center"></TextView>
+
+    </LinearLayout>
+
+</LinearLayout>
